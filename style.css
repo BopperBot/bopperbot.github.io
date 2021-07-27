@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#squiggle-yellow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60vw;
+}
+
+#squiggle-red {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 60vw;
+}
