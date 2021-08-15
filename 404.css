@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#squiggle-yellow {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 50vh;
+}
+
+#squiggle-red {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 50vh;
+    transform: translateX(5vh);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 0px 20px 1px #00000067;
+    position: fixed;
+}
+
+.title {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-top: 5px;
+}
+
+.info {
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+}
+
+.button {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 7px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.button-yellow {
+    background-color: #ffd865;
+    color: #000;
+    transition: 0.3s;
+}
+
+.button-yellow:hover {
+    background-color: #e4c159;
+    transition: 0.3s;
+}
+
+.main .buttons {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+}
+
+.main .buttons .button {
+    width: 100%;
+}
+.navbar {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    padding: 0px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.315);
+    top: 0px;
+    left: 0px;
+}
+
+.navbar .logo {
+    user-select: none;
+    cursor: pointer;
+    font-family: 'Righteous', sans-serif;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 50px;
+    margin: 10px;
+}
