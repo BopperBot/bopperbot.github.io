@@ -68,6 +68,13 @@ body {
     transition: 0.3s;
 }
 
+.button-disabled {
+    background-color: #807040;
+    color: #000;
+    transition: 0.3s;
+    cursor: not-allowed;
+}
+
 .button-yellow:hover {
     background-color: #e4c159;
     transition: 0.3s;
