@@ -21,7 +21,7 @@
 .navbar .logo {
     user-select: none;
     cursor: pointer;
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Paytone One', sans-serif;
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -30,6 +30,8 @@
 .navbar .logo img {
     height: 50px;
     margin: 10px;
+    border-radius: 50%;
+    border: 1px solid #dadada;
 }
 
 body {

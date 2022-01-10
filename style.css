@@ -29,14 +29,15 @@ body {
 .main {
     padding: 10px;
     border-radius: 10px;
-    background-color: rgb(240, 240, 240);
+    /*background-color: rgb(240, 240, 240);*/
+    background-color: #fff;
     box-shadow: 0px 0px 20px 1px #00000067;
     position: fixed;
 }
 
 .title {
-    font-size: 50px;
-    font-family: 'Righteous', sans-serif;
+    font-size: 40px;
+    font-family: 'Paytone One', sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -44,9 +45,10 @@ body {
 
 .logo {
     margin: 10px;
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
+    border: 1px solid #dadada;
 }
 
 .info {
