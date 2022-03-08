@@ -14,7 +14,6 @@
 
 body {
     height: 300vh;
-    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -58,7 +57,7 @@ body {
 
 .hero-text {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -88,7 +87,55 @@ h3 {
     font-style: normal;
     font-weight: 500;
     font-size: 3rem;
-    line-height: 68px;
+    line-height: 1.2em;
+}
+
+.text-blob {
+    width: 50%;
+    height: 50vh;
+    float: right;
+}
+
+.blob-right svg {
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+
+.text-blob-text {
+    float: right;
+    margin-right: 10px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    color: white;
+}
+
+.text-blob-text h2 {
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.3rem;
+    line-height: 70px;
+    /* or 108% */
+
+    text-align: right;
+}
+
+.text-blob-text p {
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 37px;
+    text-align: right;
+    letter-spacing: -0.02em;
+}
+
+.blink {
+    animation: blink 0.5s infinite alternate;
 }
 
 @keyframes bounce {
@@ -97,5 +144,14 @@ h3 {
     }
     to {
         transform: translateY(20px);
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
