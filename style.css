@@ -3,7 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500;700&display=swap');
 
 :root {
-    font-size: 1.5vh;
+    font-size: calc((1.5vh + 1.5vw) / 2);
+    --blob-width: 0.5vw;
+}
+
+/* Make blobs the full width on small screens */
+@media screen and (max-width: 600px) {
+    :root {
+        --blob-width: 100%;
+    }
 }
 
 * {
@@ -41,8 +49,24 @@ body {
 #hero-svg-lower {
     position: relative;
     top: 100%;
-    transform: translateY(calc(-100% + 100px));
+    transform: translateY(calc(-50% - 4rem));
+    z-index: 2;
 }
+
+/* Hide on screens where they would overlap */
+@media screen and (max-height: 356px) {
+    #hero-svg-lower {
+        display: none;
+    }
+}
+
+/* Hide on screens where they would overlap */
+@media screen and (max-height: 5rem) {
+    #hero-svg-lower {
+        display: none;
+    }
+}
+
 
 #library-browser {
     animation: bounce 2s infinite alternate ease-in-out;
@@ -63,6 +87,19 @@ body {
 
     min-width: 60vw;
     margin: 20px;
+    z-index: 100;
+}
+
+/* Full width on small screens */
+@media screen and (max-width: 600px) {
+    .hero-text {
+        width: 100vw;
+        min-width: unset;
+        margin: 0;
+        padding: 3rem;
+        left: unset;
+        transform: translateY(-50%);
+    }
 }
 
 /* @media (max-width: 768px) {
@@ -91,9 +128,11 @@ h3 {
 }
 
 .text-blob {
-    width: 50%;
+    width: var(--blob-width);
     height: 50vh;
-    float: right;
+    position: absolute;
+    top: 100vh;
+    z-index: 1;
 }
 
 .blob-right svg {
@@ -107,7 +146,7 @@ h3 {
     margin-right: 10px;
     position: absolute;
     top: 110%;
-    left: 50%;
+    width: var(--blob-width);
     color: white;
 }
 
@@ -135,7 +174,7 @@ h3 {
 }
 
 .blink {
-    animation: blink 0.5s infinite alternate;
+    animation: blink 1s step-end infinite;
 }
 
 @keyframes bounce {
@@ -148,10 +187,10 @@ h3 {
 }
 
 @keyframes blink {
-    from {
-        opacity: 1;
-    }
-    to {
+    from, to {
         opacity: 0;
+    }
+    50% {
+        opacity: 1;
     }
 }

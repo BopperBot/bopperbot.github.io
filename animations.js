@@ -6,6 +6,7 @@ const uses = [
     "utility",
     "games",
     "reaction roles",
+    "economy",
     "server management"
 ]
 
