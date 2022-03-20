@@ -11,6 +11,7 @@
 @media screen and (max-width: 600px) {
     :root {
         --blob-width: 100%;
+        --color-gobble: #c63634;
     }
 }
 
@@ -185,6 +186,21 @@ h3 {
     padding-top: 1rem;
 }
 
+@media screen and (max-width: 600px) {
+    .text-blob {
+        width: 100vw;
+        height: unset;
+        top: 100vh;
+    }
+
+    .text-blob-text {
+        transform: translateY(-2px);
+        background-color: var(--color-gobble);
+        width: 100%;
+        padding: 0 0.6rem 17rem 0.6rem;
+    }
+}
+
 /* Make the text larger on smaller screens */
 @media screen and (max-width: 600px) {
     .text-blob-text {
@@ -232,6 +248,15 @@ h3 {
 
 .blob-right .text-blob-text p {
     text-align: right;
+}
+
+.editor-graphic {
+    width: 40vw;
+    position: absolute;
+    top: 100vh;
+    left: 24vw;
+    z-index: -1;
+    transform: translateX(-50%);
 }
 
 .blink {
